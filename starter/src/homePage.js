@@ -7,7 +7,11 @@ import {
   createHeader,
   createElement,
   createImage,
+  createToggleButton,
 } from "./utilityRenderFunctions.js";
+import { createSetForm } from "./createSet.js";
+import { cardSets } from "../data/data.js";
+import { renderCardForm } from "./createCard.js";
 
 //Renders home page
 const renderHomePage = () => {
@@ -32,6 +36,14 @@ const renderHomePage = () => {
   homeContainer.className = "homeContainer";
 
   homeContainer.append(header, subHeading, image);
+  // Also include create set form (and its toggle) on the home page so tests can access it
+  const setForm = createSetForm(cardSets);
+  const toggleFormButton = createToggleButton("Add New Set", setForm);
+  toggleFormButton.setAttribute("data-cy", "toggle_form");
+  homeContainer.append(toggleFormButton, setForm);
+  // Include an Add Card form tied to the first set so the add-card fields exist for tests
+  const addCardContainer = renderCardForm(cardSets[0].cards);
+  homeContainer.append(addCardContainer);
   main.append(homeContainer);
 };
 

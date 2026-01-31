@@ -4,9 +4,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
   text-align: center;
+  box-sizing: border-box;
 }
 
 /* Image Styling */
@@ -30,7 +30,7 @@
   margin: 0;
 }
 
-/* Media Query for Tablets (768px and below) */
+/* Tablet */
 @media (max-width: 768px) {
   .homeContainer h1 {
     font-size: 2.5rem;
@@ -46,7 +46,7 @@
   }
 }
 
-/* Media Query for Mobile Devices (480px and below) */
+/* Mobile */
 @media (max-width: 480px) {
   .homeContainer h1 {
     font-size: 2rem;
@@ -57,7 +57,6 @@
   }
 
   .homeContainer img {
-    max-width: 100%;
     margin-top: 10px;
   }
 }

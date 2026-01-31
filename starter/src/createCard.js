@@ -46,11 +46,11 @@ const renderCardForm = (set) => {
     const description = e.target.descriptionInput.value;
     // Handles error if user enters an empty string in any of the inputs
     if (!term && !description) {
-      showError("TERM AND DESCRIPTION CANNOT BE EMPTY");
+      showError("Error: Front and Back cannot be empty");
     } else if (!term) {
-      showError("TERM CANNOT BE EMPTY");
+      showError("Error: Front cannot be empty");
     } else if (!description) {
-      showError("DESCRIPTION CANNOT BE EMPTY");
+      showError("Error: Back cannot be empty");
     } else {
       addCard(term, description, set);
     }

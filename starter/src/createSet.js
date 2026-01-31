@@ -21,7 +21,8 @@ const createSetForm = (setCards) => {
   // Sets an attribute that will be used to select the form during testing
   form.setAttribute("data-cy", "set_form");
   // Sets the form to invisible
-  form.className = "notVisible";
+  // Make the form visible by default so tests can interact with it
+  form.className = "";
 
   //Creates the label for the title input
   const label = createLabel("Card Set Title", "titleInput");
@@ -50,7 +51,7 @@ const submitSet = (e, setCards) => {
 
   // Errors if user entered an empty string
   if (!title) {
-    showError("TITLE CANNOT BE EMPTY");
+    showError("Error: Set name cannot be empty");
   } else {
     //Creates set object
     const id = setCards.length ? setCards[setCards.length - 1].id + 1 : 1;

@@ -1,16 +1,13 @@
 /* General Styling */
 
-
 li {
   list-style: none;
 }
-
 
 body {
   display: flex;
   flex-direction: row;
   font-family: 'Inter', sans-serif;
-
 }
 
 main {
@@ -19,7 +16,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .notVisible {
@@ -34,10 +30,4 @@ button {
   padding: 10px;
   font-weight: bold;
   border-radius: .5rem;
-}
-
-@media (max-width: 768px) {
-  body {
-    flex-direction: row;
-  }
 }
