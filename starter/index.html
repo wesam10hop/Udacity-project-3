@@ -1,51 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StudyNight</title>
-  <link rel="stylesheet" href="styles/style.css">
-  <link rel="stylesheet" href="styles/flipcard.css">
-  <link rel="stylesheet" href="styles/navigationMenu.css">
-  <link rel="stylesheet" href="styles/about.css">
-  <link rel="stylesheet" href="styles/form.css">
-</head>
-<body>
-  <header>
-    <h1 data-cy="header">Study Night</h1>
-    <nav aria-label="Main Navigation Menu" class="primary_nav_bar">
-      <ul>
-        <li><a data-cy="homeLink" href="/">Home</a></li>
-        <li><a data-cy="aboutLink" href="/about">About</a></li>
-        <li><a data-cy="cardSetLink" href="/card-set">Card Sets</a></li>
-      </ul>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudyNight</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/flipcard.css" />
+    <link rel="stylesheet" href="styles/navigationMenu.css" />
+    <link rel="stylesheet" href="styles/about.css" />
+    <link rel="stylesheet" href="styles/form.css" />
+  </head>
+  <body>
+    <header>
+      <h1 data-cy="header">Study Night</h1>
+      <nav aria-label="Main Navigation Menu" class="primary_nav_bar">
+        <ul>
+          <li><a data-cy="homeLink" href="/">Home</a></li>
+          <li><a data-cy="aboutLink" href="/about">About</a></li>
+          <li><a data-cy="cardSetLink" href="/card-set">Card Sets</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <main>
-  <!-- Create Set Form -->
-  <form id="createSetForm">
-    <label data-cy="createSetLabel" for="createSetName">Set Name:</label>
-    <input data-cy="createSetName" id="createSetName" name="createSetName" type="text" />
-    <input data-cy="createSetButton" type="submit" value="Create Set" />
-    <div data-cy="successMessage" class="hidden">Set created!</div>
-    <div data-cy="errorMessage" class="hidden">Please enter a set name.</div>
-  </form>
+    <main>
+      <!-- Create Set Form -->
+      <form id="createSetForm">
+        <label data-cy="createSetLabel" for="createSetName">Set Name:</label>
+        <input
+          data-cy="createSetName"
+          id="createSetName"
+          name="createSetName"
+          type="text"
+        />
+        <input data-cy="createSetButton" type="submit" value="Create Set" />
+        <div data-cy="successMessage" class="hidden">Set created!</div>
+        <div data-cy="errorMessage" class="hidden">
+          Please enter a set name.
+        </div>
+      </form>
 
-  <!-- Add Card Form -->
-  <form id="addCardForm">
-    <label data-cy="cardFrontLabel" for="cardFront">Front:</label>
-    <input data-cy="cardFront" id="cardFront" name="cardFront" type="text" />
+      <!-- Add Card Form -->
+      <form id="addCardForm">
+        <label data-cy="cardFrontLabel" for="cardFront">Front:</label>
+        <input
+          data-cy="cardFront"
+          id="cardFront"
+          name="cardFront"
+          type="text"
+        />
 
-    <label data-cy="cardBackLabel" for="cardBack">Back:</label>
-    <input data-cy="cardBack" id="cardBack" name="cardBack" type="text" />
+        <label data-cy="cardBackLabel" for="cardBack">Back:</label>
+        <input data-cy="cardBack" id="cardBack" name="cardBack" type="text" />
 
-    <input data-cy="addCardButton" type="submit" value="Add Card" />
-    <div data-cy="successMessage" class="hidden">Card added!</div>
-    <div data-cy="errorMessage" class="hidden">Please fill both sides.</div>
-  </form>
-</main>
-  <script type="module" src="./data/data.js"></script>
-  <script type="module" src="./src/index.js"></script>
-</body>
+        <input data-cy="addCardButton" type="submit" value="Add Card" />
+        <div data-cy="successMessage" class="hidden">Card added!</div>
+        <div data-cy="errorMessage" class="hidden">Please fill both sides.</div>
+      </form>
+    </main>
+    <script type="module" src="./data/data.js"></script>
+    <script type="module" src="./src/index.js"></script>
+  </body>
 </html>

@@ -4,12 +4,12 @@
   "description": "In this Project Students will optimize and test a front-end web application called Study Night, a flashcard tool.",
   "type": "module",
   "license": "MIT",
-"scripts": {
-  "start": "parcel starter/index.html --port 1234",
-  "test": "mocha \"test/**/*.js\"",
-  "cypress:open": "cypress open",
-  "cypress:run": "cypress run"
-},
+  "scripts": {
+    "start": "parcel starter/index.html --port 1234",
+    "test": "mocha \"test/**/*.js\"",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+  },
   "devDependencies": {
     "chai": "^6.2.2",
     "cypress": "^15.9.0",

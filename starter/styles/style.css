@@ -7,7 +7,7 @@ li {
 body {
   display: flex;
   flex-direction: row;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 main {
@@ -29,5 +29,5 @@ button {
   text-transform: uppercase;
   padding: 10px;
   font-weight: bold;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }

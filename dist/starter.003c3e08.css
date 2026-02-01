@@ -2,7 +2,8 @@ header {
   width: 100px;
 }
 
-header h1, nav li {
+header h1,
+nav li {
   text-transform: uppercase;
 }
 
