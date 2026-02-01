@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/navigationMenu.css" />
     <link rel="stylesheet" href="styles/about.css" />
     <link rel="stylesheet" href="styles/form.css" />
+    <link rel="stylesheet" href="styles/home.css" />
   </head>
   <body>
     <header>
@@ -23,6 +24,23 @@
     </header>
 
     <main>
+      <!-- Home Section -->
+      <div class="homeContainer">
+        <img src="./images/homePage.png" alt="Home Page Image" />
+      </div>
+
+      <!-- About Section -->
+      <div class="aboutContainer">
+        <img src="./images/aboutImage.png" alt="About Page Image" />
+        <div class="textContainer">
+          <h2>About Study Night</h2>
+          <p>
+            Study Night is a flashcard web app to help you learn efficiently.
+            Create sets, add cards, and shuffle them for a fun study experience.
+          </p>
+        </div>
+      </div>
+
       <!-- Create Set Form -->
       <form id="createSetForm">
         <label data-cy="createSetLabel" for="createSetName">Set Name:</label>
@@ -57,6 +75,7 @@
         <div data-cy="errorMessage" class="hidden">Please fill both sides.</div>
       </form>
     </main>
+
     <script type="module" src="./data/data.js"></script>
     <script type="module" src="./src/index.js"></script>
   </body>
