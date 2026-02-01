@@ -1,11 +1,17 @@
 import gulp from "gulp";
 import shell from "gulp-shell";
 
-// Default task → يشغّل Parcel
-gulp.task("default", shell.task(["npx parcel starter/index.html --open"]));
+// Parcel dev server
+gulp.task("parcel-dev", shell.task("parcel starter/index.html --port 1234"));
 
-// Unit tests task → يشغّل Mocha
-gulp.task("test", shell.task(['npx mocha "test/**/*.js"']));
+// Parcel build
+gulp.task("parcel-build", shell.task("parcel build starter/index.html"));
 
-// Cypress E2E tests task → من CLI
-gulp.task("cypress", shell.task(["npx cypress run"]));
+// Mocha unit tests
+gulp.task("unit-test", shell.task('mocha "test/**/*.js"'));
+
+// Cypress E2E tests
+gulp.task("cypress-test", shell.task("cypress run"));
+
+// Default task → Dev server + Cypress tests
+gulp.task("default", gulp.series("parcel-dev", "cypress-test"));

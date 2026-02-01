@@ -39,8 +39,7 @@
   transform: rotateY(180deg);
 }
 
-.term,
-.description {
+.term, .description {
   backface-visibility: hidden;
   color: #000;
   border: solid gray;

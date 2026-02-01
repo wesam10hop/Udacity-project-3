@@ -5,10 +5,13 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "start": "parcel starter/index.html --port 1234",
-    "test": "mocha \"test/**/*.js\"",
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "start": "gulp parcel-dev",
+    "build": "gulp parcel-build",
+    "test": "gulp unit-test",
+    "cypress:run": "gulp cypress-test",
+    "dev": "gulp",
+    "parcel-dev": "parcel starter/index.html",
+    "parcel-build": "parcel build starter/index.html"
   },
   "devDependencies": {
     "chai": "^6.2.2",
